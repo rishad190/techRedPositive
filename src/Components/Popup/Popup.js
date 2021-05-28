@@ -26,7 +26,7 @@ const Popup = () => {
   const onSubmit = (data) => {
     closeModal();
     console.log(data);
-    fetch("http://localhost:5000/addData", {
+    fetch("https://glacial-brushlands-61037.herokuapp.com/addData", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

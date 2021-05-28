@@ -15,7 +15,7 @@ const UserInfo = (props) => {
   } = useForm();
 
   useEffect(() => {
-    fetch("http://localhost:5000/showData")
+    fetch("https://glacial-brushlands-61037.herokuapp.com/showData")
       .then((res) => res.json())
       .then((data) => {
         setItems(data);
@@ -33,7 +33,7 @@ const UserInfo = (props) => {
   // };
 
   const updateUserInfo = (id) => {
-    fetch(`http://localhost:5000/updateUser/${id}`)
+    fetch(`https://glacial-brushlands-61037.herokuapp.com/updateUser/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setUpdateData(data);
@@ -53,7 +53,7 @@ const UserInfo = (props) => {
       updateEmail,
       updateHobbies,
     };
-    fetch(`http://localhost:5000/update/${id}`, {
+    fetch(`https://glacial-brushlands-61037.herokuapp.com/update/${id}`, {
       method: "PATCH",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(updateAll),
@@ -69,7 +69,7 @@ const UserInfo = (props) => {
   };
 
   const deleteUserInfo = (id) => {
-    fetch(`http://localhost:5000/deleteUser/${id}`, {
+    fetch(`https://glacial-brushlands-61037.herokuapp.com/deleteUser/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
