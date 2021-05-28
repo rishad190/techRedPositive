@@ -1,0 +1,17 @@
+.table_box {
+  display: grid;
+  grid-template-columns: 350px 200px 150px 250px auto;
+  grid-template-rows: 150px;
+  grid-row-gap: 20px;
+  align-items: center;
+}
+.full_table_box {
+  display: grid;
+  grid-template-columns: 50px auto 100px;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.button_box {
+  float: right;
+}
